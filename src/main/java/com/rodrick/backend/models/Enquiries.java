@@ -11,7 +11,7 @@ public class Enquiries {
     @Id
     @GeneratedValue
     private Long id;
-    private String message;
+    private String description;
     private String email;
 
     public Long getId() {
@@ -22,12 +22,12 @@ public class Enquiries {
         this.id = id;
     }
 
-    public String getMessage() {
-        return message;
+    public String getDescription() {
+        return description;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getEmail() {
