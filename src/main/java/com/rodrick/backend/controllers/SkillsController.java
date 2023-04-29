@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("https://rodrickgulu.github.io/RodrickGulu")
+@CrossOrigin
 @RequestMapping("/rodrick")
 public class SkillsController {
     @Autowired

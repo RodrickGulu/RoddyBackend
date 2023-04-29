@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/rodrick")
-@CrossOrigin("https://rodrickgulu.github.io/RodrickGulu")
+@CrossOrigin
 public class CommentsController {
     @Autowired
     public CommentsRepo commentsRepo;

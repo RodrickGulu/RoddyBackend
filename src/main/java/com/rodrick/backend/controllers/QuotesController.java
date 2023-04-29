@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/rodrick")
-@CrossOrigin("https://rodrickgulu.github.io/RodrickGulu")
+@CrossOrigin
 public class QuotesController {
     @Autowired
     private QuotesRepo quotesRepo;
