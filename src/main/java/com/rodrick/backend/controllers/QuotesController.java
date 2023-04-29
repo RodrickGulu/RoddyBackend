@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/rodrick")
@@ -15,9 +16,13 @@ public class QuotesController {
     @Autowired
     private QuotesRepo quotesRepo;
 
-    @GetMapping("/getQuotes")
-    public List<Quotes> getQuotes() {
-        return quotesRepo.findAll();
+    @GetMapping("/getQuote/{id}")
+    public Optional<Quotes> getQuotes(@PathVariable Long id) {
+        return quotesRepo.findById(id);
+    }
+    @GetMapping("/quotes")
+    public Integer getNumber(){
+        return Math.toIntExact(quotesRepo.count());
     }
 
     @PostMapping("/addQuotes")
