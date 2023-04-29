@@ -20,7 +20,7 @@ public class CommentsController {
         return commentsRepo.findAll();
     }
 
-    @PostMapping("/AddComment")
+    @PostMapping("/addComment")
     public ResponseEntity<Comments> addComments(@RequestBody Comments comments) {
         comments.setDateTime(LocalDateTime.now());
         if(comments.getName() == null) {
